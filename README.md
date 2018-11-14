@@ -12,11 +12,11 @@ Nearly all Markdown applications support the basic syntax outlined in John Grube
 1. ### Header 3
 1. #### Header 4
 
-## 粗体 or 斜体
+## 粗体 or 斜体
 - *斜体*
 - **粗体**
 
-## 有序列表和无序列表
+## 有序列表和无序列表
 有序列表使用数字加上点创建，无序列表使用-创建.
 
 - 无序列表
@@ -25,7 +25,7 @@ Nearly all Markdown applications support the basic syntax outlined in John Grube
 - 无序列表
     1. 有序列表
         1. 有序子列表
-        1. 有序子列表
+        1. 有序子列表
     1. 有序列表
 - 无序列表
 
@@ -37,7 +37,7 @@ Nearly all Markdown applications support the basic syntax outlined in John Grube
 * And here's the third list item.
 
 
-## 块引用（Blockquotes）
+## 块引用（Blockquotes）
 块引用使用>创建
 > 这里是块信息。
 
@@ -47,14 +47,14 @@ Nearly all Markdown applications support the basic syntax outlined in John Grube
 > 
 >> 这里是另一个块信息
 >
->>> 第三层嵌套
+>>> 第三层嵌套
 > 
 >> just for test
 >
-> just for test.
+> just for test.
 
-## 代码块
-代码块使用`Object o = new Object();`创建，多行使用```创建。
+## 代码块
+代码块使用`Object o = new Object();`创建，多行使用```创建。
 ```java
 class HelloWorld {
     public static void main(String...  args) {
@@ -63,8 +63,8 @@ class HelloWorld {
     }
 }
 ```
-## 链接 {#links}
-- ### 外连接
+## 链接 {#links}
+- ### 外连接
 <https://daringfireball.net/projects/markdown/syntax>
 [Daring Fireball](https://daringfireball.net/projects/markdown/syntax)
 [Daring FireBall][daring-fireball]
@@ -83,7 +83,7 @@ class HelloWorld {
 
 
 
-## 引用区
-保存本文中用到的引用。
+## 引用区
+保存本文中用到的引用。
 
 [daring-fireball]: https://daringfireball.net/projects/markdown/syntax "Daring Fireball title"
