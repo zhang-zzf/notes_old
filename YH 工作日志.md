@@ -19,6 +19,43 @@
 本周事项：
 
 1. 上线确认 @李靖春
+
 2. 限流规则生成 @李靖春 
+
+   sentinel_rules/partner-center/config:
+
+   ```
+   {
+       "flow": true,
+       "logOnlyWhenBlocked": true
+   }
+   ```
+
+   sentinel_rules/partner-center/flow:
+
+   ```
+   [
+       {
+           "resource": "com.yonghui.partner.api.PartnerService:findPartner(long,long,java.lang.String,com.yonghui.partner.api.model.developing.AddressInfo)",
+           "count": 1000000
+       },
+       {
+           "resource": "com.yonghui.partner.api.PartnerService:findPartner(long,long)",
+           "count": 1000000
+       },
+       {
+           "resource": "com.yonghui.partner.api.PartnerService:getOrder(long)",
+           "count": 1000000
+       },
+       {
+           "resource": "com.yonghui.partner.api.PartnerService:getCountOfDeliveryOrder(java.lang.Integer,com.yonghui.partner.api.model.order.PartnerOrderStatus)",
+           "count": 1000000
+       }
+   ]
+   ```
+
+   
+
 3. 日志收集 @牟良
+
 4. 服务列表
