@@ -34,13 +34,13 @@
    >
    > cd ~/.ssh;find . -name "id_rsa"|xargs chmod 600
 
-7. fzf
+7. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
 
    > brew install fzf
    >
    > /usr/local/opt/fzf/install
 
-8. autojump
+8. autojump [A cd command that learns - easily navigate directories from the command line](https://github.com/wting/autojump)
 
    > brew install autojump
    >
