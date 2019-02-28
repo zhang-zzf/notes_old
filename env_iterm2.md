@@ -40,8 +40,13 @@
    >
    > /usr/local/opt/fzf/install
 
-8. Awesome shell
+8. autojump
 
-   > 1. autojump
-   > 2. tree
-   > 3. 
+   > brew install autojump
+   >
+   > j notes 会自动跳转到~/workspace/gitHub/notes目录
+
+9. Awesome shell
+
+   > 1. tree
+   > 2. 
