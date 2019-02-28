@@ -38,4 +38,46 @@
 #### just install docker client on MacOS
 
 1. brew install docker
-2. brew info docker-compose.
+2. brew info docker-compose
+
+#### mac 查看端口占用
+
+```shell
+lsof -nP -i[tcp|udp][@hostname|hostaddr][:service|port]
+
+lsof -nP -i :80
+lsof -nP -i :http
+
+lsof -nP -i tcp:8500
+
+lsof -nP -i tcp@127.0.0.1:8500
+```
+
+#### mac 查看端口监听
+
+```shell
+lsof -nP -itcp -stcp:listen
+```
+
+#### 终端tcp/udp流量走shadowsocks代理
+
+```
+vim ~/.zshrc  
+
+添加一下3行到文件最后
+# proxy list
+alias proxy='export all_proxy=socks5://127.0.0.1:1080'
+alias unproxy='unset all_proxy
+```
+
+验证方法如下：
+
+1. unproxy
+
+   > curl https://ip.cn
+
+2. proxy
+
+   > curl https://ip.cn
+
+3. 对比输出

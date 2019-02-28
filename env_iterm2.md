@@ -30,9 +30,10 @@
 
 6. ssh 配置文件，直接关联iCloud
 
-   > cd ~; ln -s "/Users/feng/Library/Mobile Documents/com~apple~CloudDocs/Settings/ssh" .ssh
-   >
-   > cd ~/.ssh;find . -name "id_rsa"|xargs chmod 600
+   ```
+   cd ~; ln -s "/Users/feng/Library/Mobile Documents/com~apple~CloudDocs/Settings/ssh" .ssh
+   cd ~/.ssh;find . -name "id_rsa"|xargs chmod 600
+   ```
 
 7. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
 
