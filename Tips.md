@@ -81,3 +81,10 @@ alias unproxy='unset all_proxy
    > curl https://ip.cn
 
 3. 对比输出
+
+#### mac unix时间戳
+
+```shell
+date +%s
+```
+

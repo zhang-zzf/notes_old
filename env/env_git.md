@@ -10,17 +10,21 @@
    >
    > git config --global core.excludesfile "~/.gitignore_global"
 
+3. 
 
+### iCloud 软连接，可以在Mac系统之间共享
 
-## iCloud 软连接，可以在Mac系统之间共享
-
->cd ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git
+>mv ~/.gitconfig ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/gitconfig
 >
->mv ~/.gitconfig gitconfig
+>mv ~/.gitignore_global ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/gitignore_global
 >
->mv ~/.gitignore_global gitignore_global
+>mv ~/.git_commit_template ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/git_commit_template
 >
 >ln -s ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/gitconfig ~/.gitconfig
 >
 >ln -s ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/gitignore_global ~/.gitignore_global
+>
+>ln -s ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/git_commit_template ~/.git_commit_template
+
+
 

@@ -5,6 +5,8 @@
 > 更换硬件后windows压测
 >
 > 验证HEVC硬件加速
+>
+> Imac18.3 尝试
 
 ### Hardware
 

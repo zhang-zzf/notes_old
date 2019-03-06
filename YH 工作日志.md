@@ -14,9 +14,16 @@
 
 5.  
 
+#####2019 第10周工作笔记：
 
+1. ~~日志中环境问题~~
+2. http异步Client
+3. ~~ES 集群模式~~
+4. 联合测试@卢乾坤开发@李靖春调低限流阀值 
+5. Pod重启 扩容 缩容 api (追@牟良 )
+6. 
 
-本周事项：
+#####2019 第9周事项：
 
 1. ~~上线确认 @李靖春~~
 
@@ -56,12 +63,15 @@
 
    
 
-3. 日志收集 @牟良
+3. ~~日志收集 @牟良~~
 
 4. 服务列表
 
 5. 日志区分容器/vm   @changyuli
 
-6. 
 
-7. 
+####本地环境搭建
+
+vm1/vm2
+
+cd /usr/local/spring-cloud-provider;/usr/local/jdk/bin/java -Xms32m -Xmx32m -Dcsp.sentinel.log.dir=/usr/local/spring-cloud-provider/logs -jar spring-cloud-provider.jar &>/dev/null &

@@ -47,6 +47,7 @@
          <string>agent</string>
          <string>-server</string>
          <string>-bootstrap</string>
+         <string>-bind=127.0.0.1</string>
          <string>-node=consul_server</string>
          <string>-data-dir=/usr/local/var/lib/consul</string>
          <string>-ui</string>
