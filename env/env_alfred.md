@@ -12,4 +12,11 @@
 
    > 参考http://www.packal.org/workflow/homebrew-and-cask-alfred
 
-4. 
+4. 打开书签功能
+
+   > Preferences -> Features -> Web Bookmarks 
+
+5. vpn 控制
+
+   > 参考https://github.com/deanishe/alfred-vpn-manager
+

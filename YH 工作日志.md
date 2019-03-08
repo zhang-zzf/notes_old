@@ -1,4 +1,4 @@
-## YH 工作日志
+## 	YH 工作日志
 
 1. logstash @timestamp 时区问题
 
@@ -12,16 +12,18 @@
 
 4. 资源依赖 , TOPN , 实例的负载均衡（参考@张超  http://skywalking.yonghuivip.com/#/monitor/service
 
-5.  
+5. 参考下/flow/ajax_overflow_utf8.jsp 对于指定 限流框架的异常 指定一个输出资源 b2c-platform发布一个优化
+
+6. 
 
 #####2019 第10周工作笔记：
 
 1. ~~日志中环境问题~~
-2. http异步Client
+2. ~~http异步Client~~，可深入学习下[实现原理](https://hc.apache.org/httpcomponents-core-ga/tutorial/html/index.html)
 3. ~~ES 集群模式~~
-4. 联合测试@卢乾坤开发@李靖春调低限流阀值 
-5. Pod重启 扩容 缩容 api (追@牟良 )
-6. 
+   4. 联合测试@卢乾坤开发@李靖春调低限流阀值 
+4. Pod重启 扩容 缩容 api (追@牟良 )
+5. 
 
 #####2019 第9周事项：
 
