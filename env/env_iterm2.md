@@ -12,9 +12,9 @@
 
    > git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
    >
-   > cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+   > cd ~; mv ~/.zshrc ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/zsh/zshrc
    >
-   > vi ~/.zshrc
+   > ln -s "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Settings/zsh/zshrc" ~/.zshrc
 
 4. 转换成zsh
 
