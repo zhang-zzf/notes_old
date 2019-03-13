@@ -28,26 +28,39 @@
 
    > git clone git://github.com/altercation/solarized.git
 
-6. ssh 配置文件，直接关联iCloud
+6. 安装power-line 字体
+
+   > ```
+   > # clone
+   > git clone https://github.com/powerline/fonts.git --depth=1
+   > # install
+   > cd fonts
+   > ./install.sh
+   > # clean-up a bit
+   > cd ..
+   > rm -rf fonts
+   > ```
+
+7. ssh 配置文件，直接关联iCloud
 
    ```
    cd ~; ln -s "/Users/feng/Library/Mobile Documents/com~apple~CloudDocs/Settings/ssh" .ssh
    cd ~/.ssh;find . -name "id_rsa"|xargs chmod 600
    ```
 
-7. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
+8. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
 
    > brew install fzf
    >
    > /usr/local/opt/fzf/install
 
-8. autojump [A cd command that learns - easily navigate directories from the command line](https://github.com/wting/autojump)
+9. autojump [A cd command that learns - easily navigate directories from the command line](https://github.com/wting/autojump)
 
    > brew install autojump
    >
    > j notes 会自动跳转到~/workspace/gitHub/notes目录
 
-9. Awesome shell
+10. Awesome shell
 
    > 1. tree
    > 2. 

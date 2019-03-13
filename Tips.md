@@ -88,3 +88,9 @@ alias unproxy='unset all_proxy
 date +%s
 ```
 
+#### mac 删除所有.DS_Store
+
+```
+cd ~; find . -name ".DS_Store"|less
+```
+
