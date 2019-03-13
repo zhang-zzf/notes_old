@@ -12,4 +12,14 @@
    4. idea -> Preferences -> Build -> Maven -> Repositories -> 选中https://repo.maven.apache.org/maven2 -> 点击update
    5. 由于开启了代理，maven central 仓库的下载速度那是溜溜的。
 
-3. 
+3. 解决卡在（hang）"Finished,saving caches"
+
+   ```
+   sudo nvim /etc/hosts
+   127.0.0.1 localhost <hostnameOfMac>
+   ```
+
+   > 把上面的hostnameOfMac改为自己的mac名字，System Preferences -> Sharing -> "Computers on your local network can access your computer at: zhanfengzhangs-MacBook-Pro-18.local"
+   >
+   > zhanfengzhangs-MacBook-Pro-18.local即是我的mac的名字
+

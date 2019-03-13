@@ -88,3 +88,18 @@ alias unproxy='unset all_proxy
 date +%s
 ```
 
+
+
+#### mac 显示隐藏文件
+
+> ⌘ + ⇧ + . 可以快速显示/隐藏 隐藏文件
+
+```
+//显示隐藏文件
+defaults write com.apple.finder AppleShowAllFiles -bool true
+//不显示隐藏文件
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+// restart finder
+```
+

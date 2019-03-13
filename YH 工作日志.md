@@ -14,16 +14,30 @@
 
 5. 参考下/flow/ajax_overflow_utf8.jsp 对于指定 限流框架的异常 指定一个输出资源 b2c-platform发布一个优化
 
-6. 
+6. springcloud 接口列表 resturn type待优化
+
+7. 
+
+
+
+
+
+##### 2019 第11周工作笔记：
+
+1. ~~skywalking 接口测试~~
+2. 服务体验接口封装
+3. dubbo服务列表
+
+
 
 #####2019 第10周工作笔记：
 
 1. ~~日志中环境问题~~
 2. ~~http异步Client~~，可深入学习下[实现原理](https://hc.apache.org/httpcomponents-core-ga/tutorial/html/index.html)
 3. ~~ES 集群模式~~
-   4. 联合测试@卢乾坤开发@李靖春调低限流阀值 
-4. Pod重启 扩容 缩容 api (追@牟良 )
-5. 
+4. ~~联合测试@卢乾坤开发@李靖春调低限流阀值~~
+5. Pod重启 扩容 缩容 api (追@牟良 )
+6. 
 
 #####2019 第9周事项：
 

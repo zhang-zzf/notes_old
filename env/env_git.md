@@ -12,7 +12,9 @@
 
 3. 
 
-### iCloud 软连接，可以在Mac系统之间共享
+### iCloud 软连接，可以在Mac系统之间共享 
+
+> **废弃，该用mackup+dropbox共享配置** 
 
 >mv ~/.gitconfig ${HOME}/Library/Mobile\ Documents/com~apple~CloudDocs/Settings/Git/gitconfig
 >
