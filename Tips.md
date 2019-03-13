@@ -87,9 +87,6 @@ alias unproxy='unset all_proxy
 ```shell
 date +%s
 ```
-
-
-
 #### mac 显示隐藏文件
 
 > ⌘ + ⇧ + . 可以快速显示/隐藏 隐藏文件
@@ -102,4 +99,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 
 // restart finder
 ```
+#### mac 删除所有.DS_Store
 
+```
+cd ~; find . -name ".DS_Store"|less
+```
