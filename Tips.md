@@ -103,4 +103,5 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 
 ```
 cd ~; find . -name ".DS_Store"|less
+cd ~; find . -name ".DS_Store" -exec rm -f {} \;
 ```
