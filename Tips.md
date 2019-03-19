@@ -105,3 +105,13 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 cd ~; find . -name ".DS_Store"|less
 cd ~; find . -name ".DS_Store" -exec rm -f {} \;
 ```
+
+#### mac 不自动挂载磁盘
+
+```
+sudo vifs
+
+UUID=NUMBER none hfs rw,noauto
+把NUMBER替换成磁盘的UUID（可在磁盘管理工具中查看）
+```
+
