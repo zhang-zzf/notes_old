@@ -1,12 +1,58 @@
-#### Mac smart quotes and dashes
+## CentOS 网络相关
+
+1. 配置网卡
+
+   vi /etc/sysconfig/network-scripts/ifcfg-enp0s10
+
+   > dhcp
+
+   ```
+   TYPE=Ethernet
+   BOOTPROTO=dhcp
+   DEVICE=enp0s10
+   ONBOOT=yes
+   ```
+
+   > static
+
+   ```
+   TYPE=Ethernet
+   BOOTPROTO=static
+   IPADDr=192.168.56.1
+   PREFIX=24
+   DEVICE=enp0s10
+   ONBOOT=yes
+   ```
+
+   
+
+1. 
+
+## VirtualBox 常用命令
+
+1. Headless start
+
+   > VBoxManage startvm <uuid|vmname> [--type gui|headless|separate]
+
+1. Pause/Resume
+
+   > VBoxManage controlvm <uuid|vmname> pause|resume|poweroff|savestate|reset
+
+1. 查看vm信息
+
+   > VBoxManage showvminfo <uuid|vmname> [--details]
+
+1. 控制Guest
+
+   > TODO VBoxManage guestcontrol 
+
+## Mac: smart quotes and dashes
 
 > 会把2个英文短横变成1个中文长横
 >
 > 关闭方法：System Preferences -> Keyboard -> Text -> uncheck "Use smart quotes and dashes"
 
-
-
-#### enable the remote API for dockerd
+## Docker: enable the remote API for dockerd
 
 1. TODO use TLS to secure the deamon
 
@@ -35,12 +81,12 @@
 
 5. Ensure that anyone that has access to the TCP listening socket is a trusted user since access to the docker daemon is root-equivalent.
 
-#### just install docker client on MacOS
+## MacOS: just install docker client on 
 
 1. brew install docker
 2. brew info docker-compose
 
-#### mac 查看端口占用
+## mac: 查看端口占用
 
 ```shell
 lsof -nP -i[tcp|udp][@hostname|hostaddr][:service|port]
@@ -53,13 +99,13 @@ lsof -nP -i tcp:8500
 lsof -nP -i tcp@127.0.0.1:8500
 ```
 
-#### mac 查看端口监听
+## mac: 查看端口监听
 
 ```shell
 lsof -nP -itcp -stcp:listen
 ```
 
-#### 终端tcp/udp流量走shadowsocks代理
+## mac: 终端tcp/udp流量走shadowsocks代理
 
 ```
 vim ~/.zshrc  
@@ -82,12 +128,12 @@ alias unproxy='unset all_proxy
 
 3. 对比输出
 
-#### mac unix时间戳
+## mac: unix时间戳
 
 ```shell
 date +%s
 ```
-#### mac 显示隐藏文件
+## mac: 显示隐藏文件
 
 > ⌘ + ⇧ + . 可以快速显示/隐藏 隐藏文件
 
@@ -99,14 +145,14 @@ defaults write com.apple.finder AppleShowAllFiles -bool false
 
 // restart finder
 ```
-#### mac 删除所有.DS_Store
+## mac: 删除所有.DS_Store
 
 ```
 cd ~; find . -name ".DS_Store"|less
 cd ~; find . -name ".DS_Store" -exec rm -f {} \;
 ```
 
-#### mac 不自动挂载磁盘
+## mac: 不自动挂载磁盘
 
 ```
 sudo vifs
