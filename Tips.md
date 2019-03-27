@@ -1,3 +1,13 @@
+## Shell 获取目录下的所有目录
+
+```
+for dir in `ls -d */`;do
+	ls -lh $dir
+done
+```
+
+
+
 ## CentOS 网络相关
 
 1. 配置网卡
@@ -160,4 +170,6 @@ sudo vifs
 UUID=NUMBER none hfs rw,noauto
 把NUMBER替换成磁盘的UUID（可在磁盘管理工具中查看）
 ```
+
+
 
