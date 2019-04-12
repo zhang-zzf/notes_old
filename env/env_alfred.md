@@ -22,15 +22,21 @@
 
    > Preferences -> Features -> Web Bookmarks 
 
-6. vpn 控制
+6. 打开Clipboard和Snippets
+
+   > Preferences -> Features -> Clipboard/Snippets
+   >
+   > 可以快速输入一下常用语⌘ 
+
+7. vpn 控制
 
    > 参考https://github.com/deanishe/alfred-vpn-manager
 
-7. idea 快速打开项目
+8. idea 快速打开项目
 
    > https://github.com/bchatard/jetbrains-alfred-workflow
 
-8. 快速查词/翻译
+9. 快速查词/翻译
 
    > 查询系统字典 define/spell {word}
    >
@@ -38,7 +44,7 @@
    >
    > 翻译 bm fanyi 直接打开fanyi.baidu.com
 
-9. 
+10. 
 
 
 

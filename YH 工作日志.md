@@ -20,13 +20,46 @@
 
 
 
+##### 2019 第12周工作笔记：服务治理平台接口详细梳理
+
+1. 服务列表（怎么表示）
+
+1. 服务监控/实例管理数据在哪
+
+1. 接口监控详解
+
+1. 流控
+
+   > todo 无法配置应用级别开关（流控/日志）
+   >
+   > todo 无法按应用展示流控规则
+   >
+   > todo 无手动添加页面
+
 
 
 ##### 2019 第11周工作笔记：
 
 1. ~~skywalking 接口测试~~
-2. 服务体验接口封装
+
+2. ~~服务体验接口封装~~
+
+   ```
+   /v1/service_check/services
+   /v1/service_check/services/{serviceId}/instance_throughput
+   /v1/service_check/services/{serviceId}/topology
+   /v1/service_check/services/{serviceId}/rt
+   /v1/service_check/services/{serviceId}/slow_end_point
+   请求参数中请携带start/end时间参数
+   http://192.168.20.237:9300/v1/service_check/services/1441/instance_throughput?start=2019-03-13 16:35&end=2019-03-13 16:50
+   ```
+
+   
+
 3. dubbo服务列表
+
+   1. ~~优化服务列表在zk中的数据结构~~
+   1. RESTFul uri
 
 
 
