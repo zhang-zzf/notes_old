@@ -1,3 +1,23 @@
+## Mac 获取路由信息
+
+```
+route -n get default
+route -n get 192.168.30.5
+route -n get www.google.com
+netstat -rn
+```
+
+
+
+## CentOS 更新时间
+
+```shell
+yum install ntpdate
+ntpdate us.pool.ntp.org
+```
+
+
+
 ## Shell 获取目录下的所有目录
 
 ```

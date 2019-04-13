@@ -44,7 +44,9 @@
    >
    > 翻译 bm fanyi 直接打开fanyi.baidu.com
 
-10. 
+10. gitlab and github
+
+11. 
 
 
 
