@@ -313,7 +313,7 @@ d-ARY-CHILD(i, j)
 
 取pivot，小的放pivot左边，大的放pivot右边，俗称分区过程。递归排序左边子序列和右边子序列。
 
-####循环不变式：A[pivot_index...right] ≥A[right]
+#### 循环不变式：A[pivot_index...right] ≥A[right]
 
 **此不变式是错误的，初始化时不能满足。但下面的算法是正确的**
 
@@ -401,7 +401,7 @@ TAIL_RECURSIVE_QUICK_SORT(A, p, r)
 		p=q+1
 ```
 
-###快速排序 尾递归实现优化版本
+### 快速排序 尾递归实现优化版本
 
 最坏栈深度为lgn
 
@@ -444,13 +444,11 @@ COUNTINT_SORT(A, k)
 
 ### 基数排序 Radix-sort
 
-```
+```c++
 RADIX_SORT(A, d):
 	for i=1 to d
 		use a stable sort to sort array A on digit i
-
-
-
+```
 
 ## 基本数据结构
 
@@ -528,7 +526,7 @@ ENQUEUE(Q, x)
 	Q.tail=(Q.tail+1)%n
 ```
 
-####DEQUEUE
+#### DEQUEUE
 
 ```c++
 DEQUEUE(Q)
