@@ -99,7 +99,7 @@ MAX_HEAPIFY(A, i)
 
 **时间复杂度为O(nlgn)，更紧确的界是O(n)。**因此我们可以认为是在**线性时间内把无序数组构建成最大堆。**
 
-#####BUILD_MAX_HEAP
+##### BUILD_MAX_HEAP
 
 ```
 BUILD_MAX_HEAP(A)
@@ -142,7 +142,7 @@ i从n递减到1，每次交换A[1]和A[i]，把A.heap_size -=1然后MAX_HEAPIFY(
 
 **时间复杂度为O(nlgn)**
 
-#####HEAP_SORT
+##### HEAP_SORT
 
 ```
 HEAP_SORT(A)
@@ -483,7 +483,7 @@ PUSH(S, x)
 	S[++S.top]=x		
 ```
 
-####POP
+#### POP
 
 ```c++
 POP(S)
