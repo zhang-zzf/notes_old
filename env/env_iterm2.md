@@ -24,11 +24,15 @@
    >
    > 查看当前的shell：ps -p $$
 
-5. 下载solarized配色方案
+5. 安装zsh-plugins
+
+  > brew install  zsh-autosuggestions zsh-syntax-highlighting zsh-completions
+
+6. 下载solarized配色方案
 
    > git clone git://github.com/altercation/solarized.git
 
-6. 安装power-line 字体
+7. 安装power-line 字体
 
    > ```
    > # clone
@@ -41,26 +45,25 @@
    > rm -rf fonts
    > ```
 
-7. ssh 配置文件，直接关联iCloud
+8. ssh 配置文件，直接关联dropbox
 
    ```
-   cd ~; ln -s "/Users/feng/Library/Mobile Documents/com~apple~CloudDocs/Settings/ssh" .ssh
    cd ~/.ssh;find . -name "id_rsa"|xargs chmod 600
    ```
 
-8. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
+9. fzf [A command-line fuzzy finder](https://github.com/junegunn/fzf)
 
    > brew install fzf
    >
    > /usr/local/opt/fzf/install
 
-9. autojump [A cd command that learns - easily navigate directories from the command line](https://github.com/wting/autojump)
+10. autojump [A cd command that learns - easily navigate directories from the command line](https://github.com/wting/autojump)
 
    > brew install autojump
    >
    > j notes 会自动跳转到~/workspace/gitHub/notes目录
 
-10. Awesome shell
+11. Awesome shell
 
    > 1. tree
    > 2. 

@@ -14,19 +14,19 @@
 
    > [kd workflow](https://github.com/roylez/alfred_kuaidi/releases)
 
-4. 集成brew 
+4. 集成brew
 
    > 参考http://www.packal.org/workflow/homebrew-and-cask-alfred
 
 5. 打开书签功能
 
-   > Preferences -> Features -> Web Bookmarks 
+   > Preferences -> Features -> Web Bookmarks
 
 6. 打开Clipboard和Snippets
 
    > Preferences -> Features -> Clipboard/Snippets
    >
-   > 可以快速输入一下常用语⌘ 
+   > 可以快速输入一下常用语⌘
 
 7. vpn 控制
 
@@ -40,11 +40,13 @@
 
    > 查询系统字典 define/spell {word}
    >
-   > [查询在线词典](https://github.com/liberize/alfred-dict-workflow) (默认词霸) cc {word} 
+   > [查询在线词典](https://github.com/liberize/alfred-dict-workflow) (默认词霸) cc {word}
    >
    > 翻译 bm fanyi 直接打开fanyi.baidu.com
 
-10. 
+10. gitlab and github
+
+11.
 
 
 
@@ -72,7 +74,4 @@
    >
    > ⌘ + ↩︎ Reveal in Finder
 
-2. 
-
-
-
+2.
