@@ -101,6 +101,22 @@ http://localhost:3000/v1/sentinel/monitor/http/history?appName=atlantis-web&feat
    1. /v1/sentinel/monitor/http 接⼝流控监控-实时查询
    1. /v1/sentinel/monitor/dubbo
 
+##### 2019 第12周工作笔记：服务治理平台接口详细梳理
+
+1. 服务列表（怎么表示）
+
+1. 服务监控/实例管理数据在哪
+
+1. 接口监控详解
+
+1. 流控
+
+   > todo 无法配置应用级别开关（流控/日志）
+   >
+   > todo 无法按应用展示流控规则
+   >
+   > todo 无手动添加页面
+
 
 
 ##### 2019 第11周工作笔记：

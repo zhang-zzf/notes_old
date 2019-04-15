@@ -88,7 +88,7 @@ MAX_HEAPIFY(A, i)
 			largest = r
 		if largest == i
 			break
-		else 
+		else
 			swap A[i] with A[largest]
 			i = largest
 ```
@@ -99,7 +99,7 @@ MAX_HEAPIFY(A, i)
 
 **时间复杂度为O(nlgn)，更紧确的界是O(n)。**因此我们可以认为是在**线性时间内把无序数组构建成最大堆。**
 
-#####BUILD_MAX_HEAP
+##### BUILD_MAX_HEAP
 
 ```
 BUILD_MAX_HEAP(A)
@@ -111,7 +111,7 @@ BUILD_MAX_HEAP(A)
 
 每次插入之前是一个大堆，MAX_HEAP_INSERT之后依然是一个大堆。
 
-**循环不变式 A[1, i-1]是大堆，插入i元素到A中，A[1,i]是大堆。** 
+**循环不变式 A[1, i-1]是大堆，插入i元素到A中，A[1,i]是大堆。**
 
 ##### MAX_HEAP_INSERT
 
@@ -142,7 +142,7 @@ i从n递减到1，每次交换A[1]和A[i]，把A.heap_size -=1然后MAX_HEAPIFY(
 
 **时间复杂度为O(nlgn)**
 
-#####HEAP_SORT
+##### HEAP_SORT
 
 ```
 HEAP_SORT(A)
@@ -211,10 +211,10 @@ PriorityQueue {
 #### INSERT(S,x)
 
 ```
-INSERT(S, x) 
+INSERT(S, x)
 	ensureCapacity()
 	S[++heap_size] = x
-	for (i = heap_size; i>=1 and S[i] > S[PARENT(i)]; i = PARENT(i)) 
+	for (i = heap_size; i>=1 and S[i] > S[PARENT(i)]; i = PARENT(i))
 		MAX_HEAPIFY(S, PARENT(i))
 ```
 
@@ -313,7 +313,7 @@ d-ARY-CHILD(i, j)
 
 取pivot，小的放pivot左边，大的放pivot右边，俗称分区过程。递归排序左边子序列和右边子序列。
 
-####循环不变式：A[pivot_index...right] ≥A[right]
+#### 循环不变式：A[pivot_index...right] ≥A[right]
 
 **此不变式是错误的，初始化时不能满足。但下面的算法是正确的**
 
@@ -355,7 +355,7 @@ RANDOMIZED_PARTITION(A, p, r)
 	i=RANDOM(p, r)
 	exchange A[r] with A[i]
 	return PARTITION(A, p, r)
-	
+
 QUICK_SORT(A, left, right)
 	if (left<right)
 		q=RANDOMIZED_PARTITION(A, left, right)
@@ -380,7 +380,7 @@ PARTITION'(A, p, r)
 	t+=1
 	exchange A[t] with A[r]
 	return (q+1, t)
-	
+
 QUICK_SORT'(A, p, r)
 	if p<r
     equal_1, equal_2=PARTITION'(A, p, r)
@@ -401,7 +401,7 @@ TAIL_RECURSIVE_QUICK_SORT(A, p, r)
 		p=q+1
 ```
 
-###快速排序 尾递归实现优化版本
+### 快速排序 尾递归实现优化版本
 
 最坏栈深度为lgn
 
@@ -413,7 +413,7 @@ TAIL_RECURSIVE_QUICK_SORT'(A, p, r)
     if q-p<r-q
       TAIL_RECURSIVE_QUICK_SORT'(A, p, q-1)
       p=q+1
-    else 
+    else
       TAIL_RECURSIVE_QUICK_SORT'(A, q+1, r)
       r=q-1
 ```
@@ -444,27 +444,151 @@ COUNTINT_SORT(A, k)
 
 ### 基数排序 Radix-sort
 
-```
+```c++
 RADIX_SORT(A, d):
 	for i=1 to d
 		use a stable sort to sort array A on digit i
 ```
 
 
-
 ## 数据结构
 
 ### 基本数据结构
 
+#### 栈 stack
+
+栈的数组实现S[1..n]，S.top指向栈顶元素，S.top=0时表示空栈，S.top=n时表示满栈。
+
+##### STACK_EMPTY
+
+```c++
+STACK_EMPTY(S)
+	if S.top=0
+		return true
+	return false
+```
+
+##### STACK_FULL
+
+```c++
+STACK_FULL(S)
+	if S.top=n
+		return true
+	return false
+```
+
+##### PUSH
+
+```c++
+PUSH(S, x)
+	if STACK_FULL(S)
+		error "stack is full"
+	S[++S.top]=x		
+```
+
+##### POP
+
+```c++
+POP(S)
+	if STACK_EMPTY(S)
+		error "stack is empty"
+	return S[S.top--]
+```
+
 #### 队列 queue
 
-##### deque
+循环队列的数组实现Q[1..n]，Q.size表示队列的大小（Q.size<=n），Q.head表示队列的头，Q.tail表示队列的尾
+
+##### QUEUE_INIT
+
+```
+QUEUE_INIT(Q)
+  Q.size=0
+  Q.head=1
+  Q.tail=1
+```
+
+##### EMPTY/FULL
+
+```
+QUEUE_EMPTY(Q)
+	return Q.size==0
+
+QUEUE_FULL(Q)
+	return Q.size==n
+```
+
+##### ENQUEUE
+
+```c++
+ENQUEUE(Q, x)
+	if QUEUE_FULL(Q)
+		error "queue is full"
+	Q[Q.tail]=x
+	Q.size+=1
+	Q.tail=(Q.tail+1)%n
+```
+
+##### DEQUEUE
+
+```c++
+DEQUEUE(Q)
+  if QUEUE_EMPTY(S)
+    error "queue is empty"
+	x=Q[Q.head]
+	Q.size-=1
+	Q.head=(Q.head+1)%n
+	return x
+```
+
+Q[1..n]容纳n-1个元素时，只需要Q.head表示队列的头，Q.tail表示队列的尾
+
+##### QUEUE_INIT
+
+```
+QUEUE_INIT(Q)
+  Q.head=1
+  Q.tail=1
+```
+
+##### EMPTY/FULL
+
+```
+QUEUE_EMPTY(Q)
+	return Q.tail==Q.head
+
+QUEUE_FULL(Q)
+	return Q.tail+1==Q.head
+```
+
+##### ENQUEUE
+
+```c++
+ENQUEUE(Q, x)
+	if QUEUE_FULL(Q)
+		error "queue is full"
+	Q[Q.tail]=x
+	Q.tail=(Q.tail+1)%n
+```
+
+##### DEQUEUE
+
+```c++
+DEQUEUE(Q)
+  if QUEUE_EMPTY(S)
+    error "queue is empty"
+	x=Q[Q.head]
+	Q.head=(Q.head+1)%n
+	return x
+```
+
+#### 双端队列 deque
 
 数组实现：DQ[1..n]，DQ.header表示队头，DQ.tailer表示队尾。
 
 DQ.header==DQ.tailer 空队列；(DQ.tailer+1)%n==DQ.header 满队列。
 
-###### DEQUE_INIT
+##### DEQUE_INIT
 
 ```
 DEQUE_INIT(DQ)
@@ -472,17 +596,17 @@ DEQUE_INIT(DQ)
 	DQ.tailer=1
 ```
 
-###### DEQUE_FULL / DEQUE_EMPTY
+##### DEQUE_FULL / DEQUE_EMPTY
 
 ```c++
 DEQUE_FULL(DQ)
  return (DQ.tailer+1)%n==DQ.header
- 
+
 DEQUE_EMPTY(DQ)
 	return DQ.tailer==DQ.header
 ```
 
-###### ENDEQUE_TAILER
+##### ENDEQUE_TAILER
 
 ```c++
 ENDEQUE_TAILER(DQ, x)
@@ -492,7 +616,7 @@ ENDEQUE_TAILER(DQ, x)
 	DQ.tailer=(DQ.tailer+1)%n
 ```
 
-###### ENDEQUE_HEADER
+##### ENDEQUE_HEADER
 
 ```c++
 ENDQUUE_HEADER(DQ, x)
@@ -505,7 +629,7 @@ ENDQUUE_HEADER(DQ, x)
 	DQ[DQ.header]=x
 ```
 
-###### DEDEQUE_HEADER
+##### DEDEQUE_HEADER
 
 ```c++
 DEDEQUE_HEADER(DQ)
@@ -516,7 +640,7 @@ DEDEQUE_HEADER(DQ)
 	return x
 ```
 
-###### DEDEQUE_TAILER
+##### DEDEQUE_TAILER
 
 ```c++
 DEDEQUE_TAILER(DQ)
@@ -528,36 +652,3 @@ DEDEQUE_TAILER(DQ)
 		DQ.tailer=n
 	return x
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
