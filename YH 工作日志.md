@@ -2,7 +2,7 @@
 
 1. y5ozFhxR
 2. logstash @timestamp 时区问题
-3. 提供Pod重启 扩容 缩容 api (追@牟良 )
+3. ~~提供Pod重启 扩容 缩容 api (追@牟良 )~~
 4. ~~资源依赖 , TOPN , 实例的负载均衡（参考@张超  http://skywalking.yonghuivip.com/#/monitor/service~~
 5. 参考下/flow/ajax_overflow_utf8.jsp 对于指定 限流框架的异常 指定一个输出资源 b2c-platform发布一个优化
 6. springcloud 接口列表 resturn type待优化
