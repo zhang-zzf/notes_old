@@ -174,7 +174,7 @@ mysql> alter table redis_choose
 1. create
 
    ```mysql
-   create unique index `${index_name}` on `${table_name}`(`${column_name}`[,`${column_name_2}`]);
+   create [unique] index `${index_name}` on `${table_name}`(`${column_name}`[,`${column_name_2}`]);
    
    alter table `${table_name}` add constraint `${index_name}` unique(`${column_name}`[,`${column_name_2}`]);
    ```
@@ -186,4 +186,69 @@ mysql> alter table redis_choose
    alter table `${table_name}` drop index `${index_name}`;
    ```
 
-1. 
+
+
+
+## mysql 通配符
+
+```
+% 0-n 个字符
+_ 1 个字符
+[abc] 其中一个字符
+[^abc] [!abc] 不是abc的一个字符
+```
+
+
+
+## mysql 细节相关
+
+1. 查看日志位置
+
+   > select @@log_error;
+
+1. 查看当前用户
+
+   > select user();
+
+1. 更改自动递增列的起始值
+
+   ```sql
+   alter table `${table_name}` auto_increment=${start_value}
+   
+   alter table `user` auto_increment=1000
+   ```
+
+1. 时间相关操作
+
+   ```sql
+   mysql> select now(), curdate(),curtime();
+   +---------------------+------------+-----------+
+   | now()               | curdate()  | curtime() |
+   +---------------------+------------+-----------+
+   | 2019-04-16 17:10:46 | 2019-04-16 | 17:10:46  |
+   +---------------------+------------+-----------+
+   1 row in set (0.00 sec)
+   ```
+
+   对于datetime类型的字段判等时必须是**yyyy-MM-dd hh:MM:ss 全部相同**，用between时可以**省略**yyyy-MM-dd hh:MM:ss中的一些字段，省略的字段默认以**0替代**。
+
+1. null相关操作
+
+   ```sql
+   `${column}` is null / `${column}` is not null 判断一个字段是否为null
+   '' is null 返回false
+   0 is null 返回false
+   
+   select ifnull(`${column}`, 0) 可以把null值转换成0值
+   ```
+
+1. 聚合查询
+
+   ```
+   select count(*) from `${table_name}`
+   select count(`${column}`) from `${table_name}` // 按某列聚合时，会忽略字段为null的行
+   select count(distinct(`${column}`)) from `${table_name}`
+   
+   ```
+
+   

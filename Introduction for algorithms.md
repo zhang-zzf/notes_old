@@ -652,3 +652,42 @@ DEDEQUE_TAILER(DQ)
 		DQ.tailer=n
 	return x
 ```
+
+#### 有根树
+
+#####  2叉树O(n) 遍历
+
+```c++
+TRAVEL_TREE(node)
+	if node!=NIL
+		print node.key
+		TRAVEL_TREE(node.left)
+		TRAVEL_TREE(node.right)
+		
+TRAVEL_TREE(node)
+	if node==NIL
+		return
+	PUSH(S, node)
+	while !STACK_EMPTY(S)
+		n=POP(S)
+		print n.key
+		if n.right!=NIL
+			PUSH(S, n.right)
+		if n.left!=NIL
+			PUSH(S, n.left)
+```
+
+##### 分支无限制的有根树 O(n)遍历
+
+左孩子，右兄弟表示法。node.parent指向父节点，node.left_child指向node的最左边的孩子节点，node.right_child指向node右侧相邻的兄弟节点。
+
+```c++
+TRAVEL_TREE(node)
+	if node!=NIL
+		print node.key
+		TRAVEL_TREE(node.right_child)
+		TRAVEL_TREE(node.left_child)
+```
+
+
+
